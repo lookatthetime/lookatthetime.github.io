@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wow! Look at the time!</title>
+</head>
+
+<body>
+
+<link href="styles/style.css" rel="stylesheet" />
+<h1><span style="color:blue">Wow!</span></h1>
+<script>
+function sleep (time) {
+  return new Promise((resolve) => setTimeout(resolve, time));
+}
+
+var currentdate = new Date(); 
+
+// Usage!
+sleep(2000).then(() => {
+    document.body.innerHTML = document.body.innerHTML.replace('Wow', "It's getting late");
+    sleep(2500).then(() => {
+        document.body.innerHTML = document.body.innerHTML.replace("It's getting late",
+        "Look at the time");
+        var datetime = "It is: " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " - "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+        sleep(2500).then(() => {
+            document.body.innerHTML = document.body.innerHTML.replace("Look at the time",
+            datetime);
+            sleep(2000).then(() => {
+                document.body.innerHTML = document.body.innerHTML.replace(datetime, "Jeez");
+                sleep(2000).then(() => {
+                    window.location.replace('home.html');
+                });
+            });
+        });
+});
+})
+</script>
+
+</body>
