@@ -6,7 +6,7 @@
 
 <body>
 
-<link href="styles/style.css" rel="stylesheet" />
+<link href="styles/time_style.css" rel="stylesheet" />
 <h1><span style="color:blue">Wow!</span></h1>
 <script>
 function sleep (time) {
@@ -33,7 +33,7 @@ sleep(2000).then(() => {
             sleep(2000).then(() => {
                 document.body.innerHTML = document.body.innerHTML.replace(datetime, "Jeez");
                 sleep(2000).then(() => {
-                    window.location.replace('home.html');
+                    window.location.replace('index.html');
                 });
             });
         });
