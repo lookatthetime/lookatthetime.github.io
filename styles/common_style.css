@@ -1,0 +1,93 @@
+body {
+    background-color: rgb(230, 255, 243);
+  }
+  
+  h1 {
+    color: rgb(67, 67, 67);
+    /* text-align: center; */
+    font-size: 50px;
+    font-family: 'Impact';
+    font-kerning: none;
+  }
+
+  h3 {
+    color: black;
+    font-size: 30px;
+    /* text-align: center; */
+    font-family: 'Courier New';
+  }
+  
+  p {
+    font-family: 'Ariel';
+    color: black;
+    /* text-align: center; */
+    font-size: 15px;
+  }
+
+  .button a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button a:hover, a:active {
+    background-color: red;
+  }
+
+  /* Nav Bar */
+  /* Nav */
+  nav {
+    height: 70px;
+    background: rgb(20, 20, 20);
+    color: rgb(220, 220, 220);
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+  }
+
+  .nav-items,
+  .overview,
+  .account {
+    display: flex;
+  }
+  .overview {
+    margin-right: 4rem;
+  }
+
+  /* Makin it look nice */
+  .logo h2 {
+    font-family: "Impact";
+    text-decoration: underline dotted green;
+    font-style: italic;
+    color: rgb(0, 206, 206);
+    cursor: pointer;
+    margin: 0 0.5rem;
+  }
+  nav li {
+    list-style: none;
+    margin: 0 0.5rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: rgb(220, 220, 220);
+  }
+  nav a:hover {
+    color: #a0ebfd;
+  }
+  nav a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background: #a0ebfd;
+    width: 0%;
+    transition: all ease-in-out 300ms;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
